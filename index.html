@@ -37,10 +37,92 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     margin: 0px;
     padding: 0px;
   }
+  .accordion {
+    display: flex;
+    flex-direction: column;
+    font-family: "Sora", sans-serif;
+    max-width: 991px;
+    min-width: 320px;
+    /* margin: 50px auto; */
+    padding: 0 50px;
+}
+.accordion h1 {
+    font-size: 32px;
+    text-align: center;
+}
+.accordion-item {
+    margin-top: 16px;
+    border: 1px solid #fcfcfc;
+    border-radius: 6px;
+    background: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+.accordion-item .accordion-item-title {
+    position: relative;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    font-size: 15px;
+    cursor: pointer;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    padding: 14px 20px;
+    box-sizing: border-box;
+    align-items: center;
+}
+.accordion-item .accordion-item-desc {
+    display: none;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 300;
+    color: #444;
+    border-top: 1px dashed #ddd;
+    padding: 10px 20px 20px;
+    box-sizing: border-box;
+}
+.accordion-item input[type="checkbox"] {
+    position: absolute;
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+.accordion-item input[type="checkbox"]:checked ~ .accordion-item-desc {
+    display: block;
+}
+.accordion-item
+    input[type="checkbox"]:checked
+    ~ .accordion-item-title
+    .icon:after {
+    content: "-";
+    font-size: 20px;
+}
+.accordion-item input[type="checkbox"] ~ .accordion-item-title .icon:after {
+    content: "+";
+    font-size: 20px;
+}
+.accordion-item:first-child {
+    margin-top: 0;
+}
+.accordion-item .icon {
+    /* margin-left: 14px; */
+}
+
+@media screen and (max-width: 767px) {
+    .accordion {
+        padding: 0 16px;
+    }
+    .accordion h1 {
+        font-size: 22px;
+    }
+}
+
+
+
 
   .splide__pagination__page {
     display: none !important;
   }
+ 
 
   .line1::after {
     content: "";
@@ -150,7 +232,30 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     display: block;
     width: 100%;
   }
+  #swiper1 {
+      width: 100%;
+      height: 100%;
+    }
 
+    .swiper22 {
+      text-align: center;
+      font-size: 18px;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 80vh;
+    }
+
+    .swiper22 img {
+      display: block;
+      width: 100%;
+      
+    
+    
+  
+      /* object-fit: cover; */
+    }
   @media(max-width:650px) {
     .textt {
       font-size: medium;
@@ -191,10 +296,24 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       display: none;
     }
   }
+  @media only screen and (max-width: 600px) {
+    .swiper22{
+      border-radius:  100%!important;
+    
+    }
+   
+    #swiperx img {
+      width: 90vw !important;
+     
+    }
+    .login{
+      display: none;
+    }
+  }
 </style>
 
 <body>
-  <div class="splide" aria-label="Splide Basic HTML Example">
+  <div class="splide"  role="group" aria-label="Splide Basic HTML Example">
     <div class="splide__track ">
            <!-- fixed; width: 100%;"> -->
       <header   class=" header-area text-center text-white d-flex w-100 mx-auto justify-content-between  position-absolute  flex-row flex-wrap  py-2 row" style="background: rgba( 255, 255, 255, 0.25 );
@@ -202,7 +321,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         backdrop-filter: blur( 4px );
         -webkit-backdrop-filter: blur( 4px ); border: 1px solid rgba( 255, 255, 255, 0.18 );z-index: 5;" >
         <div class="my-2 col-md-3"><img src="clonelogo.png" alt="Camera" style="width: 150px;"></div>
-        <div class="my-2 col-md-3 flex-wrap">
+        <div class="my-2 col-md-3 flex-wrap login">
           <div class="row d-flex justify-content-center">
            
             <div class="dropdown col-4 ">
@@ -219,24 +338,24 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         </div>
       </header>
       <div
-        class="end text-center text-danger d-flex align-items-center w-100 mx-auto justify-content-around  position-absolute   flex-wrap py-4 row"
+        class="end text-center text-danger d-flex align-items-center w-100 mx-auto justify-content-around  position-absolute   flex-wrap p-3 row"
         style="z-index: 3;background: #141414;
 box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
 backdrop-filter: blur( 9.5px );
 -webkit-backdrop-filter: blur( 9.5px );margin-top: 600px;opacity: .9;">
-        <div class="col fw-semibold fs-5 text-white"><i class="px-2 py-2 fs-4 fa-solid fa-bicycle rounded-pill  "
+        <div class="col-6 col-md-3 fw-semibold fs-5 text-white"><i class="px-2 py-2 fs-4 fa-solid fa-bicycle rounded-pill  "
             style="background-color: #292929;"></i><span>
             4.5/5 <p class="ms-3" style="font-size: 10px; font-weight: 4px;">TRIP&nbsp;ADVISOR</p>
           </span></div>
-        <div class="col fw-semibold fs-5 text-white"><i class='rounded-pill px-2 py-2 fs-4 bx bx-star'
+        <div class="col-6 col-md-3 fw-semibold fs-5 text-white"><i class='rounded-pill px-2 py-2 fs-4 bx bx-star'
             style='color:#fff2f2;background-color: #292929; '></i><span>
             4.5/5 <p class="ms-3" style="font-size: 10px; font-weight: 4px;">TRUST&nbsp;PILOT</p>
           </span></div>
-        <div class="col fw-semibold fs-5 text-white"><i class='rounded-pill px-2 py-2 fs-4 bx bxl-google'
+        <div class="col-6 col-md-3 fw-semibold fs-5 text-white"><i class='rounded-pill px-2 py-2 fs-4 bx bxl-google'
             style='color:#fffcfc;background-color: #292929; '></i><span>
             4.5/5 <p class="ms-3" style="font-size: 10px; font-weight: 4px;">GOOGLE</p>
           </span></div>
-        <div class="col fw-semibold fs-5 text-white"><i class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"
+        <div class="col-6 col-md-3 fw-semibold fs-5 text-white"><i class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"
             style='background-color: #292929; '></i><span>
             4.5/5 <p class="ms-3" style="font-size: 10px; font-weight: 4px;">REVIEWSJO</p>
           </span></div>
@@ -697,124 +816,147 @@ backdrop-filter: blur( 9.5px );
       </div>
     </div>
   </div>
+  
   <div class="container rounded  text-start  py-4 d-flex flex-column flex-grow" style="color: #515151;">
     <p class="fs-3 mx-3">Staff <span class="fw-semibold" style="color: #FCAF17">
         Handpicked</span></p>
     <small class=" text-muted mb-4 mx-3" style="font-size: 17px; ">Curated with expertise</small>
-
-    <section class="splide splide2" aria-label="Splide Basic HTML Example">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li data-aos="flip-right" data-aos-duration="3000"
-            class="splide__slide d-flex flex-column justify-content-end mx-3 rounded-3 ">
-            <div class="rounded-3 row position-absolute text-white px-3 py-3 mx-auto" style="background-image: linear-gradient(to bottom, #e3d0b7 , #855B1F);opacity: .6;background: rgba( 133, 91, 31, 0.4 );
-                  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                  backdrop-filter: blur( 18.5px );
-                  -webkit-backdrop-filter: blur( 18.5px ); width: fit-content;">
-              <small class="d-flex justify-content-between">6 days & 5 nights <span style="font-size: 13px;"><i
-                    class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
-              </small>
-              <p class="d-flex justify-content-between">Romantic Escape to Kashmir |&nbsp;FREE
-              </p>
-              <p class="">Excursion to Gulmarg
-              </p>
-              <small class="" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span class="fw-bold">.
-                  1D </span>Pahalgam
-                <span class="fw-bold">. 2D </span>Srinagar </small>
-
-              <h6 class="">INR 21,000 <small><s class="" style="font-size: 14px;">INR
-                    38,182</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1 text-white border-0 rounded "
-                    style="font-size: 12px;background-color: #AA8D63;">save INR 17,182</button></span></h6>
-              <div class="d-flex justify-content-between flex-wrap">
-
-                <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
-                    class="fa-solid fa-phone text-white" role="button"></i></a>
-                <a href="#" class="text-capitalize btn bg-white fw-semibold px-1 py-1 border rounded" role="button"
-                  style="color: #141414;">Request Callback</a>
-              </div>
+    <div class="container swiper mySwiper2" id="swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper22" id="swiperx" >  
+           <div  
+          class="splide__slide d-flex flex-column justify-content-end mx-3 rounded-3 ">
+          <div class="rounded-3 row position-absolute text-white px-3 py-3 mx-auto" style="background-image: linear-gradient(to bottom, #e3d0b7 , #855B1F);opacity: .6;background: rgba( 133, 91, 31, 0.4 );
+                box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+                backdrop-filter: blur( 18.5px );
+                -webkit-backdrop-filter: blur( 18.5px ); width: fit-content;">
+            <small class="d-flex justify-content-between">6 days & 5 nights <span style="font-size: 13px;"><i
+                  class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
+            </small>
+            <p class="d-flex justify-content-between">Romantic Escape to Kashmir |&nbsp;FREE
+            </p>
+            <p class="">Excursion to Gulmarg
+            </p>
+            <small class="" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span class="fw-bold">.
+                1D </span>Pahalgam
+              <span class="fw-bold">. 2D </span>Srinagar </small>
+  
+            <h6 class="">INR 21,000 <small><s class="" style="font-size: 14px;">INR
+                  38,182</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1 text-white border-0 rounded "
+                  style="font-size: 12px;background-color: #AA8D63;">save INR 17,182</button></span></h6>
+            <div class="d-flex justify-content-between flex-wrap">
+  
+              <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
+                  class="fa-solid fa-phone text-white" role="button"></i></a>
+              <a href="#" class="text-capitalize btn bg-white fw-semibold px-1 py-1 border rounded" role="button"
+                style="color: #141414;">Request Callback</a>
             </div>
-            <img src="clone25.avif" class="d-block  rounded-3" style="height: 80vh;" alt="Camera" />
-          </li>
-          <li data-aos="flip-right" data-aos-duration="3000"
-            class="splide__slide  d-flex flex-column  justify-content-end mx-3 rounded-3">
-            <div class="rounded-3 row position-absolute text-white px-4 py-4 mx-auto " style="background-image: linear-gradient(to bottom, #2E596A , #2E596A);opacity: .6;background: rgba( 74, 144, 226, 0.4 );
-                  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-                  backdrop-filter: blur( 20px );
-                  -webkit-backdrop-filter: blur( 20px ); width: fit-content;">
-              <small class="d-flex justify-content-between py-2">6 days & 5 nights <span style="font-size: 13px;"><i
-                    class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.4(1.1k)</span>
-              </small>
-              <p class="d-flex justify-content-between">Best Of Kashmir |&nbsp;FREE Shikara Ride
-              </p>
-
-              <small class="py-1" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span
-                  class="fw-bold">. 1D </span>Pahalgam
-                <span class="fw-bold">. 2D </span>Srinagar </small>
-              <h6 class="">INR 17,500 <small><s class="" style="font-size: 14px;">INR
-                    26,515</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1 text-white border-0 rounded "
-                    style="font-size: 12px;background-color: #AA8D63;">save INR 9,015</button></span></h6>
-              <div class="d-flex justify-content-between flex-wrap  align-items-end">
-                <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
-                    class="fa-solid fa-phone text-white" role="button"></i></a>
-                <a href="#" class="text-capitalize btn bg-white fw-semibold text-dark px-1 py-1 border rounded"
-                  role="button" style="color: #141414;">Request Callback</a>
-              </div>
-            </div>
-            <img src="clone26.avif" class="d-block w-100 rounded-3" style="height: 80vh;" alt="Camera" />
-          </li>
-          <li data-aos="flip-right" data-aos-duration="3000"
-            class="splide__slide d-flex flex-column  justify-content-end mx-3 rounded-3">
-            <div class="rounded-3 row position-absolute text-white px-4 py-2 mx-auto " style="background-image: linear-gradient(to bottom, #2E596A , #2E596A);opacity: .6;background: rgba( 74, 144, 226, 0.4 );
-            box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-            backdrop-filter: blur( 20px );
-            -webkit-backdrop-filter: blur( 20px ); width: fit-content;">
-              <small class="d-flex justify-content-between">6 days & 5 nights <span style="font-size: 13px;"><i
-                    class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.4(2.2k)</span>
-              </small>
-              <p class="d-flex justify-content-between">Highlights Of Kashmir |&nbsp;FREE Shikara Ride On Dal Lake
-              </p>
-              <p class="">Excursion to Gulmarg
-              </p>
-              <small class="" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span class="fw-bold">.
-                  1D </span>Pahalgam
-                <span class="fw-bold">. 2D </span>Srinagar </small>
-
-              <h6 class="">INR 19,500 <small><s class="" style="font-size: 14px;">INR
-                    31,452</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1  text-white border-0 rounded "
-                    style="font-size: 12px;background-color: #AA8D63;">save INR 11,952</button></span></h6>
-              <div class="d-flex justify-content-between flex-wrap">
-
-                <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
-                    class="fa-solid fa-phone text-white" role="button"></i></a>
-                <a href="#" class="text-capitalize btn bg-white text-dark px-5 py-1 border rounded"
-                  role="button">Request Callback</a>
-              </div>
-            </div>
-            <img src="clone27.avif" class="d-block w-100 rounded-3" style="height: 80vh;" alt="Camera" />
-          </li>
-          <li data-aos="flip-right" data-aos-duration="3000"
-            class="splide__slide  d-flex justify-content-center text-center rounded-3 mx-3">
-            <div class="position-absolute text-white  p-5 ">
-              <h5 class="fw-bolder fs-2 text-center" style="color: #ED0B86;">3847+</h5>
-              <p class=" title text-break">customers have travelled with us to
-                kashmir in the last 30 days.</p>
-
-              <div style="border: 1px solid #FF772B;" class="py-4 rounded-3">
-                <button class="text-white px-3 py-1 border-0  rounded-pill mb-2"
-                  style="background-color: #F84D4D; font-size: 15px; cursor: text;">Early Summer Sale
-                </button>
-                <p class="fw-bolder fs-4">Get Upto 50% Off</p>
-                </p>
-              </div>
-              <p class="mt-3" style="font-size: 13px;">Let our expert curate a dream trip for you!</p>
-              <a href="#" class=" rounded-3 text-capitalize text-decoration-none btn btn-danger " role="button">Connect
-                with an Expert</a>
-            </div>
-            <img src="clone28.jpg" class="d-block w-100 rounded-3" style="height: 80vh;" alt="Camera" />
-          </li>
-        </ul>
+          </div>
+          <img src="clone25.avif" class="d-block  rounded-3" style="height: 80vh;" alt="Camera" />
       </div>
-    </section>
+        </div>
+  
+        <div class="swiper-slide  swiper22"  id="swiperx">  
+          <div  
+         class="splide__slide d-flex flex-column justify-content-end mx-3 rounded-3 ">
+         <div class="rounded-3 row position-absolute text-white px-3 py-3 mx-auto" style="background-image: linear-gradient(to bottom, #e3d0b7 , #855B1F);opacity: .6;background: rgba( 133, 91, 31, 0.4 );
+               box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+               backdrop-filter: blur( 18.5px );
+               -webkit-backdrop-filter: blur( 18.5px ); width: fit-content;">
+           <small class="d-flex justify-content-between">6 days & 5 nights <span style="font-size: 13px;"><i
+                 class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
+           </small>
+           <p class="d-flex justify-content-between">Romantic Escape to Kashmir |&nbsp;FREE
+           </p>
+           <p class="">Excursion to Gulmarg
+           </p>
+           <small class="" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span class="fw-bold">.
+               1D </span>Pahalgam
+             <span class="fw-bold">. 2D </span>Srinagar </small>
+  
+           <h6 class="">INR 21,000 <small><s class="" style="font-size: 14px;">INR
+                 38,182</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1 text-white border-0 rounded "
+                 style="font-size: 12px;background-color: #AA8D63;">save INR 17,182</button></span></h6>
+           <div class="d-flex justify-content-between flex-wrap">
+  
+             <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
+                 class="fa-solid fa-phone text-white" role="button"></i></a>
+             <a href="#" class="text-capitalize btn bg-white fw-semibold px-1 py-1 border rounded" role="button"
+               style="color: #141414;">Request Callback</a>
+           </div>
+         </div>
+         <img src="clone25.avif" class="d-block  rounded-3" style="height: 80vh;" alt="Camera" />
+     </div>
+       </div>
+       <div class="swiper-slide  swiper22"  id="swiperx">  
+          <div  
+         class="splide__slide d-flex flex-column justify-content-end mx-3 rounded-3 ">
+         <div class="rounded-3 row position-absolute text-white px-3 py-3 mx-auto" style="background-image: linear-gradient(to bottom, #e3d0b7 , #855B1F);opacity: .6;background: rgba( 133, 91, 31, 0.4 );
+               box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+               backdrop-filter: blur( 18.5px );
+               -webkit-backdrop-filter: blur( 18.5px ); width: fit-content;">
+           <small class="d-flex justify-content-between">6 days & 5 nights <span style="font-size: 13px;"><i
+                 class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
+           </small>
+           <p class="d-flex justify-content-between">Romantic Escape to Kashmir |&nbsp;FREE
+           </p>
+           <p class="">Excursion to Gulmarg
+           </p>
+           <small class="" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span class="fw-bold">.
+               1D </span>Pahalgam
+             <span class="fw-bold">. 2D </span>Srinagar </small>
+  
+           <h6 class="">INR 21,000 <small><s class="" style="font-size: 14px;">INR
+                 38,182</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1 text-white border-0 rounded "
+                 style="font-size: 12px;background-color: #AA8D63;">save INR 17,182</button></span></h6>
+           <div class="d-flex justify-content-between flex-wrap">
+  
+             <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
+                 class="fa-solid fa-phone text-white" role="button"></i></a>
+             <a href="#" class="text-capitalize btn bg-white fw-semibold px-1 py-1 border rounded" role="button"
+               style="color: #141414;">Request Callback</a>
+           </div>
+         </div>
+         <img src="clone25.avif" class="d-block  rounded-3" style="height: 80vh;" alt="Camera" />
+     </div>
+       </div>
+       <div class="swiper-slide  swiper22"  id="swiperx">  
+          <div  
+         class="splide__slide d-flex flex-column justify-content-end mx-3 rounded-3 ">
+         <div class="rounded-3 row position-absolute text-white px-3 py-3 mx-auto" style="background-image: linear-gradient(to bottom, #e3d0b7 , #855B1F);opacity: .6;background: rgba( 133, 91, 31, 0.4 );
+               box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+               backdrop-filter: blur( 18.5px );
+               -webkit-backdrop-filter: blur( 18.5px ); width: fit-content;">
+           <small class="d-flex justify-content-between">6 days & 5 nights <span style="font-size: 13px;"><i
+                 class="rounded-pill px-2 py-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
+           </small>
+           <p class="d-flex justify-content-between">Romantic Escape to Kashmir |&nbsp;FREE
+           </p>
+           <p class="">Excursion to Gulmarg
+           </p>
+           <small class="" style="font-size: 12px;"><span class="fw-bold">3D </span> Srinagar <span class="fw-bold">.
+               1D </span>Pahalgam
+             <span class="fw-bold">. 2D </span>Srinagar </small>
+  
+           <h6 class="">INR 21,000 <small><s class="" style="font-size: 14px;">INR
+                 38,182</s></small>&nbsp;&nbsp;&nbsp;<span><button class="px-2 py-1 text-white border-0 rounded "
+                 style="font-size: 12px;background-color: #AA8D63;">save INR 17,182</button></span></h6>
+           <div class="d-flex justify-content-between flex-wrap">
+  
+             <a href="tel/:1000000000" class="btn px-3 py-1 border-white rounded"><i
+                 class="fa-solid fa-phone text-white" role="button"></i></a>
+             <a href="#" class="text-capitalize btn bg-white fw-semibold px-1 py-1 border rounded" role="button"
+               style="color: #141414;">Request Callback</a>
+           </div>
+         </div>
+         <img src="clone25.avif" class="d-block  rounded-3" style="height: 80vh;" alt="Camera" />
+     </div>
+       </div>
+       
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+   
   </div>
   <div class="container d-block mx-auto text-center mt-5">
     <h3 class="">People Love Our <span class="" style="color: #F37002;">Kashmir </span>Tours</h3>
@@ -830,7 +972,7 @@ backdrop-filter: blur( 9.5px );
     </div>
     <div class=" col-md-8 ">
       <!-- Swiper -->
-      <div class="swiper mySwiper" id="swiper1" data-aos="zoom-in-up" data-aos-duration="4000">
+      <div class="swiper mySwiper" id="swiper" data-aos="zoom-in-up" data-aos-duration="4000">
         <div class="swiper-wrapper rounded ">
           <div class="swiper-slide  border rounded-3">
             <div class="card border-0 rounded-3">
@@ -855,7 +997,7 @@ backdrop-filter: blur( 9.5px );
               </div>
             </div>
           </div>
-          <div class="swiper-slide swiper22 border rounded-3">
+          <div class="swiper-slide  border rounded-3">
             <div class="card rounded-3 border-0">
               <div class="card-body mb-5">
                 <div class="d-flex justify-content-start  ">
@@ -878,7 +1020,7 @@ backdrop-filter: blur( 9.5px );
               </div>
             </div>
           </div>
-          <div class="swiper-slide swiper22 border rounded-3">
+          <div class="swiper-slide border rounded-3">
             <div class="card border-0 rounded-3">
               <div class="card-body mb-5">
                 <div class="d-flex justify-content-start  ">
@@ -903,7 +1045,7 @@ backdrop-filter: blur( 9.5px );
               </div>
             </div>
           </div>
-          <div class="swiper-slide swiper22 border rounded-3">
+          <div class="swiper-slide  border rounded-3">
             <div class="card border-0 rounded-3">
               <div class="card-body mb-5">
                 <div class="d-flex justify-content-start  ">
@@ -930,7 +1072,7 @@ backdrop-filter: blur( 9.5px );
               </div>
             </div>
           </div>
-          <div class="swiper-slide swiper22 border rounded-3">
+          <div class="swiper-slide border rounded-3">
             <div class="card border-0 rounded-3">
               <div class="card-body mb-5">
                 <div class="d-flex justify-content-start  ">
@@ -956,7 +1098,7 @@ backdrop-filter: blur( 9.5px );
               </div>
             </div>
           </div>
-          <div class="swiper-slide swiper22 border rounded-3">
+          <div class="swiper-slide  border rounded-3">
             <div class="card border-0 rounded-3">
               <div class="card-body mb-5">
                 <div class="d-flex justify-content-start  ">
@@ -1003,135 +1145,155 @@ backdrop-filter: blur( 9.5px );
   <div class="container rounded  text-start  px-3  py-4 d-flex flex-column flex-grow" style="color: #515151;">
     <p class="fs-4  fw-bold mx-3">Honeymoon Special </p>
     <small class="fs-5  mb-4 mx-3">Tailor-Made Honeymoons Just For You</small>
-
-    <section class="splide splide3 " aria-label="Splide Basic HTML Example">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
-                style="height: 40vh;" />
-              <div class="card-body  ">
-                <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
-                        class="text-muted">(261)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
-                  Doodhpathri</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
-                  <span class="fw-bold">. 2D </span>Srinagar </class=>
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
-                      28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone61.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 40vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">5 days & 4 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.3 <span
-                        class="text-muted">(714)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Heavenly Bliss | Kashmir Honeymoon Retreat.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Pahalgam
-                  <span class="fw-bold">. 4D </span>Srinagar </class=>
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 18,000 <small><s class="" style="font-size: 13px;">INR
-                      27,692</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 9,692</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone62.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">8 days & 7 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.5 <span
-                        class="text-muted">(713)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Blissful Vacation | Kashmir Couple Special.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 2D </span>Pahalgam
-                  <span class="fw-bold"> . 2D </span>Gulmarg
-                  <span class="fw-bold"> . <br>1D </span>Srinagar
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 29,750 <small><s class="" style="font-size: 13px;">INR
-                      47,222</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 17,472</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide  d-flex justify-content-center text-center rounded-3 mx-3" data-aos="flip-right"
-            data-aos-duration="3000">
-            <div class="card rounded-3  border-0 text-center">
-              <div class="position-absolute text-white p-5 ">
-                <h5 class="fw-bolder fs-2 text-center" style="color: #ED0B86;">3847+</h5>
-                <p class=" title text-break">customers have travelled with us to
-                  kashmir in the last 30 days.</p>
-
-                <div style="border: 1px solid #FF772B;" class="py-4 rounded-3">
-                  <button class="text-white px-3 py-1 border-0  rounded-pill mb-2"
-                    style="background-color: #F84D4D; font-size: 15px; cursor: text;">Early Summer Sale
-                  </button>
-                  <p class="fw-bolder fs-4">Get Upto 50% Off</p>
+    <div class=" container swiper mySwiper2" id="swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper22" >  
+                    <div class="card rounded-3  border-0  ">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" width="100px" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
                   </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
                 </div>
-                <p class="mt-3" style="font-size: 13px;">Let our expert curate a dream trip for you!</p>
-                <a href="#" class=" rounded-3 text-capitalize text-decoration-none btn btn-danger "
-                  role="button">Connect
-                  with an Expert</a>
+              </div> 
+       </div>
+  
+        <div class="swiper-slide  swiper22">  
+         
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
               </div>
-              <img src="clone28.jpg" class="d-block w-100 rounded-3" style="height: 84vh;" alt="Camera" />
+          
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+           
             </div>
-          </li>
-        </ul>
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+          
+            </div>
+           
+       </div>
+       
       </div>
-    </section>
+      <div class="swiper-pagination"></div>
+    </div>
+   
   </div>
-  <div class="card mx-2 rounded-3 w-100 mx-auto my-5 container  rounded  px-5  py-3 bg-dark text-white"
+  <div class="card  rounded-3 w-100 mx-auto  container  rounded p-4 bg-dark text-white"
     data-aos="fade-down-right" data-aos-duration="1000">
-    <div class="row g-0  d-flex justify-content-start align-items-center flex-wrap">
+    <div class="row g-0  d-flex justify-content-start align-items-center flex-wrap ">
       <div class="col-md-6">
         <h4 class="fw-bold">Up to INR 30,000 OFF</h4>
         <span class="fw-semibold fs-5">on selected trips</span>&nbsp;&nbsp;
@@ -1161,658 +1323,476 @@ backdrop-filter: blur( 9.5px );
   <div class="deals container rounded  text-start  px-3  py-4 d-flex flex-column flex-grow" style="color: #515151;">
     <p class="fs-4  fw-bold mx-3">Best Deals </p>
 
-    <section class="splide splide4 " aria-label="Splide Basic HTML Example">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone10.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
-                style="height: 40vh;" />
-              <div class="card-body  ">
-                <small class="d-flex justify-content-between fw-medium">5 days & 4 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.8k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Kashmir Holidays | Houseboat Experience and
-                  Beyond</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
-                  <span class="fw-bold">. 3D </span>Srinagar </class=>
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 18,000 <small><s class="" style="font-size: 13px;">INR
-                      36,565</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 11,956</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone64.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 40vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">5 days & 4 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.8k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Family Getaway to Kashmir | FREE Dal Lake Ride.
-                </p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Pahalgam
-                  <span class="fw-bold">. 1D </span>Srinagar
-                  <span class="fw-bold">. 3D </span>Srinagar
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 18,700 <small><s class="" style="font-size: 13px;">INR
-                      36,565</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 11,956</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone63.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">4 days & 3 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.1k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Journey to Heaven | Scenic Kashmir Tour</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 12,999 <small><s class="" style="font-size: 13px;">INR
-                      22,412</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 9,413</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone65.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">8 days & 7 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(2.2k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Highlights of Kashmir | FREE Shikara Ride on
-                  Dal Lake.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 2D </span>Gulmarg
-
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 19,500 <small><s class="" style="font-size: 13px;">INR
-                      31,452</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 11,952</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide  d-flex justify-content-center text-center rounded-3 mx-3" data-aos="flip-right"
-            data-aos-duration="3000">
-            <div class="card rounded-3  border-0 text-center">
-              <div class="position-absolute text-white p-5 ">
-                <h5 class="fw-bolder fs-2 text-center" style="color: #ED0B86;">3847+</h5>
-                <p class=" title text-break">customers have travelled with us to
-                  kashmir in the last 30 days.</p>
-
-                <div style="border: 1px solid #FF772B;" class="py-4 rounded-3">
-                  <button class="text-white px-3 py-1 border-0  rounded-pill mb-2"
-                    style="background-color: #F84D4D; font-size: 15px; cursor: text;">Early Summer Sale
-                  </button>
-                  <p class="fw-bolder fs-4">Get Upto 50% Off</p>
+    <div class=" container swiper mySwiper2" id="swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper22" >  
+                    <div class="card rounded-3  border-0  ">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" width="100px" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
                   </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
                 </div>
-                <p class="mt-3" style="font-size: 13px;">Let our expert curate a dream trip for you!</p>
-                <a href="#" class=" rounded-3 text-capitalize text-decoration-none btn btn-danger "
-                  role="button">Connect
-                  with an Expert</a>
+              </div> 
+       </div>
+  
+        <div class="swiper-slide  swiper22">  
+         
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
               </div>
-              <img src="clone28.jpg" class="d-block w-100 rounded-3" style="height: 84vh;" alt="Camera" />
+          
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+           
             </div>
-          </li>
-        </ul>
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+          
+            </div>
+           
+       </div>
+       
       </div>
-    </section>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
   <div class="deals3 container rounded  text-start  px-3  py-4 d-flex flex-column flex-grow" style="color: #515151;">
     <p class="fs-4  fw-bold mx-3">Family Tours </p>
 
-    <section class="splide splide5 " aria-label="Splide Basic HTML Example">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone65.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">8 days & 7 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(2.2k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Highlights of Kashmir | FREE Shikara Ride on
-                  Dal Lake.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 2D </span>Gulmarg
-
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 19,500 <small><s class="" style="font-size: 13px;">INR
-                      31,452</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 11,952</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone63.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">4 days & 3 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.1k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Journey to Heaven | Scenic Kashmir Tour</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 1D </span>Gulmarg
-                  <span class="fw-bold"> . 2D </span>Srinagar
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 12,999 <small><s class="" style="font-size: 13px;">INR
-                      22,412</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 9,413</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone1.webp" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">5 days & 4 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
-                        class="text-muted">(280)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Experience the Luxury of Kashmir | FREE
-                  Excursion to Aru Valley.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 3D </span>Gulmarg
-
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 83,999 <small><s class="" style="font-size: 13px;">INR
-                      1,05,000</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 21,001</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone64.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 40vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">5 days & 4 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.8k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Family Getaway to Kashmir | FREE Dal Lake Ride.
-                </p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Pahalgam
-                  <span class="fw-bold">. 1D </span>Srinagar
-                  <span class="fw-bold">. 3D </span>Srinagar
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 18,700 <small><s class="" style="font-size: 13px;">INR
-                      36,565</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 11,956</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone67.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 40vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">3 days & 2 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.5 <span
-                        class="text-muted">(310)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Magic of Srinagar | FREE Shikara Ride</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Pahalgam
-                  <span class="fw-bold">. 1D </span>Srinagar
-                  <span class="fw-bold">. 3D </span>Srinagar
-                  <span class="fw-bold">. <br>2D </span>Srinagar
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 6,950 <small><s class="" style="font-size: 13px;">INR
-                      12,500</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 5,550</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide  d-flex justify-content-center text-center rounded-3 mx-3" data-aos="flip-right"
-            data-aos-duration="3000">
-            <div class="card rounded-3  border-0 text-center">
-              <div class="position-absolute text-white p-5 ">
-                <h5 class="fw-bolder fs-2 text-center" style="color: #ED0B86;">3847+</h5>
-                <p class=" title text-break">customers have travelled with us to
-                  kashmir in the last 30 days.</p>
-
-                <div style="border: 1px solid #FF772B;" class="py-4 rounded-3">
-                  <button class="text-white px-3 py-1 border-0  rounded-pill mb-2"
-                    style="background-color: #F84D4D; font-size: 15px; cursor: text;">Early Summer Sale
-                  </button>
-                  <p class="fw-bolder fs-4">Get Upto 50% Off</p>
+    <div class=" container swiper mySwiper2" id="swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper22" >  
+                    <div class="card rounded-3  border-0  ">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" width="100px" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
                   </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
                 </div>
-                <p class="mt-3" style="font-size: 13px;">Let our expert curate a dream trip for you!</p>
-                <a href="#" class=" rounded-3 text-capitalize text-decoration-none btn btn-danger "
-                  role="button">Connect
-                  with an Expert</a>
+              </div> 
+       </div>
+  
+        <div class="swiper-slide  swiper22">  
+         
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
               </div>
-              <img src="clone28.jpg" class="d-block w-100 rounded-3" style="height: 84vh;" alt="Camera" />
+          
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+           
             </div>
-          </li>
-        </ul>
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+          
+            </div>
+           
+       </div>
+       
       </div>
-    </section>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
   <div class="deals4 container rounded  text-start  px-3  py-4 d-flex flex-column flex-grow" style="color: #515151;">
     <p class="fs-4  fw-bold mx-3">More Kashmir Packages </p>
     <small class=" text-muted mb-4 mx-3" style="font-size: 17px; ">Let's Explore Kashmir</small>
-    <section class="splide splide6 " aria-label="Splide Basic HTML Example">
-      <div class="splide__track">
-        <ul class="splide__list">
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone66.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.5 <span
-                        class="text-muted">(2.1k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Romantic Escape to Kashmir | FREE Excursion to
-                  Gulmarg.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 2D </span>Gulmarg
-
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 21,000 <small><s class="" style="font-size: 13px;">INR
-                      38,182</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 17,182</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone68.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.2k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Best of Kashmir | FREE Shikara Ride on Dal
-                  Lake.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 2D </span>Gulmarg
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 17,500 <small><s class="" style="font-size: 13px;">INR
-                      26,515</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 9,015</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone67.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 40vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">3 days & 2 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.5 <span
-                        class="text-muted">(310)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Magic of Srinagar | FREE Shikara Ride</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Pahalgam
-                  <span class="fw-bold">. 1D </span>Srinagar
-                  <span class="fw-bold">. 3D </span>Srinagar
-                  <span class="fw-bold">. <br>2D </span>Srinagar
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 6,950 <small><s class="" style="font-size: 13px;">INR
-                      12,500</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 5,550</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
-                style="height: 40vh;" />
-              <div class="card-body  ">
-                <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
-                        class="text-muted">(261)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
-                  Doodhpathri</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
-                  <span class="fw-bold">. 2D </span>Srinagar </class=>
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
-                      28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone63.avif" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">4 days & 3 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.4 <span
-                        class="text-muted">(1.1k)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Journey to Heaven | Scenic Kashmir Tour</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">3D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 12,999 <small><s class="" style="font-size: 13px;">INR
-                      22,412</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 9,413</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide mx-3" data-aos="flip-right" data-aos-duration="3000">
-            <div class="card rounded-3  border-0">
-              <img src="clone1.webp" class="card-img-top rounded-3" alt="Fissure in Sandstone" style="height: 41vh;" />
-              <div class="card-body">
-                <small class="d-flex justify-content-between fw-medium">5 days & 4 nights <span
-                    style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
-                        class="text-muted">(280)</span></i></span>
-                </small>
-                <p class="card-title text-dark" style="font-size: 18px;">Experience the Luxury of Kashmir | FREE
-                  Excursion to Aru Valley.</p>
-
-                <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
-                  <span class="fw-bold">1D </span>Srinagar
-                  <span class="fw-bold"> . 1D </span>Pahalgam
-                  <span class="fw-bold"> . 3D </span>Gulmarg
-
-
-                </p>
-                <button class="border-0 px-2  rounded-pill text-white py-1"
-                  style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
-                <h5 class="fw-bolder">INR 83,999 <small><s class="" style="font-size: 13px;">INR
-                      1,05,000</s></small>&nbsp;&nbsp;&nbsp;<span>
-                    <button class="px-2 py-1  border-0 rounded text-success"
-                      style="font-size: 11px;background-color: #E7F3EA;">save INR 21,001</button></span></h5>
-                <div class="d-flex justify-content-between">
-
-                  <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
-                      class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
-                  <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                    style="background-color: #F37002;">Request Callback</a>
-                </div>
-              </div>
-            </div>
-          </li>
-          <li class="splide__slide  d-flex justify-content-center text-center rounded-3 mx-3" data-aos="flip-right"
-            data-aos-duration="3000">
-            <div class="card rounded-3  border-0 text-center">
-              <div class="position-absolute text-white p-5 ">
-                <h5 class="fw-bolder fs-2 text-center" style="color: #ED0B86;">3847+</h5>
-                <p class=" title text-break">customers have travelled with us to
-                  kashmir in the last 30 days.</p>
-
-                <div style="border: 1px solid #FF772B;" class="py-4 rounded-3">
-                  <button class="text-white px-3 py-1 border-0  rounded-pill mb-2"
-                    style="background-color: #F84D4D; font-size: 15px; cursor: text;">Early Summer Sale
-                  </button>
-                  <p class="fw-bolder fs-4">Get Upto 50% Off</p>
+    <div class=" container swiper mySwiper2" id="swiper1">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide swiper22" >  
+                    <div class="card rounded-3  border-0  ">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" width="100px" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
                   </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
                 </div>
-                <p class="mt-3" style="font-size: 13px;">Let our expert curate a dream trip for you!</p>
-                <a href="#" class=" rounded-3 text-capitalize text-decoration-none btn btn-danger "
-                  role="button">Connect
-                  with an Expert</a>
+              </div> 
+       </div>
+  
+        <div class="swiper-slide  swiper22">  
+         
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
               </div>
-              <img src="clone28.jpg" class="d-block w-100 rounded-3" style="height: 84vh;" alt="Camera" />
+          
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+           
             </div>
-          </li>
-        </ul>
+           
+       </div>
+       <div class="swiper-slide  swiper22">  
+          
+              <div class="card rounded-3  border-0">
+                <img src="clone60.avif" class="card-img-top rounded-3 " alt="Fissure in Sandstone"
+                  style="height: 40vh;" />
+                <div class="card-body  ">
+                  <small class="d-flex justify-content-between fw-medium">6 days & 5 nights <span
+                      style="font-size: 13px;"><i class="rounded-pill px-2 py-2  fa-solid fa-star text-success">4.9 <span
+                          class="text-muted">(261)</span></i></span>
+                  </small>
+                  <p class="card-title text-dark" style="font-size: 18px;">Kashmir Retreat | Romantic Escape to
+                    Doodhpathri</p>
+  
+                  <p class="card-text py-1 rounded" style="font-size: 14px; background-color: #FFFBF0; ">
+                    <span class="fw-bold">3D </span> Srinagar <span class="fw-bold">. 1D </span>Pahalgam
+                    <span class="fw-bold">. 2D </span>Srinagar </class=>
+                  </p>
+                  <button class="border-0 px-2  rounded-pill text-white py-1"
+                    style="background-color: #F84D4D; font-size: 11px; cursor: text;">Early Summer Sale </button>
+                  <h5 class="fw-bolder">INR 20,000 <small><s class="" style="font-size: 13px;">INR
+                        28,986</s></small>&nbsp;&nbsp;&nbsp;<span>
+                      <button class="px-2 py-1  border-0 rounded text-success"
+                        style="font-size: 11px;background-color: #E7F3EA;">save INR 8,986</button></span></h5>
+                  <div class="d-flex justify-content-between">
+  
+                    <a href="tel/:1000000000" class="btn px-3 py-1  rounded" style="border-color: #F37002;"><i
+                        class="fa-solid fa-phone " role="button" style="color: #F37002"></i></a>
+                    <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
+                      style="background-color: #F37002;">Request Callback</a>
+                  </div>
+                </div>
+          
+            </div>
+           
+       </div>
+       
       </div>
-    </section>
+      <div class="swiper-pagination"></div>
+    </div>
   </div>
  
-  <div class="deals d-flex flex-column flex-wrap container text-start">
+  <div class="deals d-flex flex-column flex-wrap container  justify-content-start">
     <p class="fs-4  fw-bold mx-3 text-secondary">Kashmir Tour FAQs </p>
-    <div class="accordion border-0" id="accordionExample">
-      <div class="accordion-item border-0">
-        <h2 class="accordion-header" id="headingOne">
-          <button class="border-0 collapsed bg-white text-secondary" style="font-size: 19px;" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-            <i class="fa-solid fa-plus fs-3 fw-lighter" style="color: #f37002;"></i>&nbsp;&nbsp;&nbsp;How much will a
-            Kashmir trip cost?
-          </button>
-        </h2>
-        <div id="collapseOne" class=" bg-white accordion-collapse collapse" aria-labelledby="headingOne"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body text-muted">
-            The <strong class="text-muted fw-bol">cost of Kashmir package</strong> typically ranges between INR 17,000
+    <div class="accordion text-start">
+           <div class="accordion-item">
+          <input type="checkbox" id="accordion1">
+          <label for="accordion1" class="accordion-item-title"><span class="icon fs-3 fw-lighter" style="color: #f37002;"></span>How much will a
+            Kashmir trip cost?</label>
+          <div class="accordion-item-desc"> The <strong class="text-muted fw-bol">cost of Kashmir package</strong> typically ranges between INR 17,000
             to INR 40,000 per person for a 5-day trip. This cost varies according to the accommodation type,
             transportation, season, and included activities. Expenses generally include local travel, hotel stays,
             meals, entry fees for attractions, and extra activities like shikara rides. Peak seasons may see higher
             prices. Furthermore, additional expenses for shopping and insurance should also be considered, with the
-            total cost dependent on personal choices and travel style.
-          </div>
-        </div>
-      </div>
-
-      <div class="accordion-item border-0">
-        <h2 class="accordion-header " id="headingTwo">
-      
-          <button class=" border-0 bg-white collapsed text-secondary" style="font-size: 19px;" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fa-solid fa-plus fs-3 fw-lighter" style="color: #f37002;"></i>&nbsp;&nbsp;&nbsp;How can I go to
-            Kashmir on a low budget
-          </button>
-        </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body text-muted">To visit Kashmir on a low budget, choose a <strong
-              class="fw-bold">Jammu Kashmir holiday package</strong> from Thrillophilia, known for affordable yet
-            enriching travel experiences. The packages often include budget-friendly accommodations, cost-effective
-            transportation options, and well-planned itineraries that cover major attractions efficiently. The approach
-            ensures a memorable trip and keeps expenses in check, offering an excellent value-for-money experience in
-            the stunning landscapes of Kashmir.
-          </div>
-        </div>
-      </div>
-      <div class="accordion-item border-0">
-        <h2 class="accordion-header" id="headingThree">
-          <button class="border-0 bg-white collapsed text-secondary" style="font-size: 19px;" type="button"
-            data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
-            aria-controls="collapseThree">
-            <i class="fa-solid fa-plus fs-3 fw-lighter " style="color: #f37002;"></i>
-            &nbsp;&nbsp;&nbsp;What are some best Kashmir tour
-            packages?
-          </button>
-        </h2>
-        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
-          data-bs-parent="#accordionExample">
-          <div class="accordion-body text-muted">
-            The best Jammu Kashmir tour package varies based on individual preferences. However, Thrillophilia offers a
-            diverse range of Kashmir trip packages, from family-oriented packages to adventure-centric tours and
-            romantic honeymoon options. Each package is uniquely tailored to suit your preferences. This ensures that a
-            perfect option is available if you seek tranquil family time, thrilling outdoor activities, or intimate
-            moments.
-          </div>
-        </div>
-      </div>
+            total cost dependent on personal choices and travel style.</div>
+      </div>     
+           <div class="accordion-item">
+          <input type="checkbox" id="accordion2">
+          <label for="accordion2" class="accordion-item-title"><span class="icon fs-3 fw-lighter" style="color: #f37002;"></span>How can I go to
+            Kashmir on a low budget</label>
+          <div class="accordion-item-desc">To visit Kashmir on a low budget, choose a <strong
+            class="fw-bold">Jammu Kashmir holiday package</strong> from Thrillophilia, known for affordable yet
+          enriching travel experiences. The packages often include budget-friendly accommodations, cost-effective
+          transportation options, and well-planned itineraries that cover major attractions efficiently. The approach
+          ensures a memorable trip and keeps expenses in check, offering an excellent value-for-money experience in
+          the stunning landscapes of Kashmir.</div>
+      </div>     
     </div>
+
+ 
   </div>
  
   <div class=" deals container  rounded  text-start  px-3  py-4 " style="color: #515151;">
@@ -2094,144 +2074,116 @@ backdrop-filter: blur( 9.5px );
   "></script>
   <script>
     // Initialize SPLIDER
-    document.addEventListener("DOMContentLoaded", function () {
-      new Splide(".splide3", {
-        type: 'loop',
-        perPage: 3,
-        spaceBetween: 10,
-        perMove: 1,
-        arrows: false,
-        focus: "center",
-        cover: true,
-        breakpoints: {
-          800: {
-            perPage: 2,
-            spaceBetween: 5,
-            focus: 0
-          },
-          600: {
-            perPage: 1
-          }
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   new Splide(".splide3", {
+    //     type: 'loop',
+    //     perPage: 3,
+    //     perMove: 1,
+    //     arrows: false,
+       
+    //     omitEnd: true,
+    //     cover: true,
+    //     breakpoints: {
+    //       800: {
+    //         perPage: 2,
+    //         spaceBetween: 5,
+    //         focus: 0
+    //       },
+    //       600: {
+    //         perPage: 1
+    //       }
+    //     }
+    //   }).mount();
+    //   new Splide(".splide4", {
+    //     type: 'loop',
+    //     perPage: 3,
+    //     spaceBetween: 10,
+    //     perMove: 1,
+    //     arrows: false,
+    //     focus: "center",
+    //     cover: true,
+    //     breakpoints: {
+    //       800: {
+    //         perPage: 2,
+    //         spaceBetween: 5,
+    //         focus: 0
+    //       },
+    //       600: {
+    //         perPage: 1
+    //       }
+    //     }
+    //   }).mount();
+    //   new Splide(".splide5", {
+    //     type: 'loop',
+    //     perPage: 3,
+    //     spaceBetween: 10,
+    //     perMove: 1,
+    //     arrows: false,
+    //     focus: "center",
+    //     cover: true,
+    //     breakpoints: {
+    //       800: {
+    //         perPage: 2,
+    //         spaceBetween: 5,
+    //         focus: 0
+    //       },
+    //       600: {
+    //         perPage: 1
+    //       }
+    //     }
+    //   }).mount();
+    //   new Splide(".splide6", {
+    //     type: 'loop',
+    //     perPage: 3,
+    //     spaceBetween: 10,
+    //     perMove: 1,
+    //     arrows: false,
+    //     focus: "center",
+    //     cover: true,
+    //     breakpoints: {
+    //       800: {
+    //         perPage: 2,
+    //         spaceBetween: 5,
+    //         focus: 0
+    //       },
+    //       600: {
+    //         perPage: 1
+    //       }
+    //     }
+    //   }).mount();
+     
+    // });
+
+    var swiper2 = new Swiper("#swiper1", {
+        slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      breakpoints: {
+        // when window width is <= 499px
+        300: {
+            slidesPerView: 1,
+            spaceBetweenSlides: 30
+        },
+        600: {
+            slidesPerView: 2,
+            spaceBetweenSlides: 30
+        },
+        // when window width is <= 999px
+        999: {
+            slidesPerView: 3,
+            spaceBetweenSlides: 40
         }
-      }).mount();
-      new Splide(".splide4", {
-        type: 'loop',
-        perPage: 3,
-        spaceBetween: 10,
-        perMove: 1,
-        arrows: false,
-        focus: "center",
-        cover: true,
-        breakpoints: {
-          800: {
-            perPage: 2,
-            spaceBetween: 5,
-            focus: 0
-          },
-          600: {
-            perPage: 1
-          }
-        }
-      }).mount();
-      new Splide(".splide5", {
-        type: 'loop',
-        perPage: 3,
-        spaceBetween: 10,
-        perMove: 1,
-        arrows: false,
-        focus: "center",
-        cover: true,
-        breakpoints: {
-          800: {
-            perPage: 2,
-            spaceBetween: 5,
-            focus: 0
-          },
-          600: {
-            perPage: 1
-          }
-        }
-      }).mount();
-      new Splide(".splide6", {
-        type: 'loop',
-        perPage: 3,
-        spaceBetween: 10,
-        perMove: 1,
-        arrows: false,
-        focus: "center",
-        cover: true,
-        breakpoints: {
-          800: {
-            perPage: 2,
-            spaceBetween: 5,
-            focus: 0
-          },
-          600: {
-            perPage: 1
-          }
-        }
-      }).mount();
-      new Splide(".splide2", {
-        type: 'loop',
-        perPage: 3,
-        spaceBetween: 10,
-        perMove: 1,
-        arrows: false,
-        focus: "center",
-        cover: true,
-        breakpoints: {
-          800: {
-            perPage: 2,
-            spaceBetween: 5,
-            focus: 0
-          },
-          600: {
-            perPage: 1
-          }
-        }
-      }).mount();
+    }
     });
-
-
+  
     var splide = new Splide('.splide');
     splide.mount();
 
-    var splide2 = new Splide('.splide2', {
-      type: 'loop',
-      perPage: 3,
-      spaceBetween: 10,
-      perMove: 1,
-    });
-    splide2.mount();
-    // var splide3 = new Splide('.splide3', {
-    //   type: 'loop',
-    //   perPage: 3,
-    //   spaceBetween: 10,
-    //   perMove: 1,
-    // });
-    // splide3.mount();
-    // var splide4 = new Splide('.splide4', {
-    //   type: 'loop',
-    //   perPage: 3,
-    //   spaceBetween: 10,
-    //   perMove: 1,
-    // });
-    // splide4.mount();
-    // var splide5 = new Splide('.splide5', {
-    //   type: 'loop',
-    //   perPage: 3,
-    //   spaceBetween: 10,
-    //   perMove: 1,
-    // });
-    // splide5.mount();
-    // var splide6 = new Splide('.splide6', {
-    //   type: 'loop',
-    //   perPage: 3,
-    //   spaceBetween: 10,
-    //   perMove: 1,
-    // });
-    // splide6.mount();
-    // Initialize Swiper
+   
+   
     var swiper = new Swiper(".mySwiper", {
       effect: "coverflow",
       grabCursor: true,

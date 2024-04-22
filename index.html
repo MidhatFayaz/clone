@@ -35,7 +35,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
 </head>
 <style>
   * {
-    font-family:
+    
       margin: 0px;
     padding: 0px;
   }
@@ -113,14 +113,14 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     color: #515151;
     -webkit-touch-callout: none;
     touch-action: pan-y;
-    -webkit-tap-highlight-color:
+    /* -webkit-tap-highlight-color: */
   }
 
   .accordion {
     display: flex;
     flex-direction: column;
     font-family: "Sora", sans-serif;
-   
+
   }
 
   .accordion h1 {
@@ -409,7 +409,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <div class="my-2 col-md-3"><img src="landing/clonelogo.png" alt="Camera" style="width: 150px;"></div>
         <div class="my-2 col-md-3 flex-wrap login">
           <div class="row d-flex justify-content-center">
-
             <div class="dropdown col-4 ">
               <a class="text-white text-decoration-none dropdown-toggle" href="" role="button" id="dropdownMenuLink"
                 data-mdb-dropdown-init data-mdb-ripple-init aria-expanded="false">
@@ -510,7 +509,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <button class="btn  text-light d-block w-100" style="height: 50px; background:#F37002;">Request
           Callback</button>
       </div>
-      <div id="tpp" style="position: absolute; top 90vh;">
+      <div id="tpp" style="position: absolute; ">
         <h1></h1>
       </div>
       <div class="card p-4 d-flex"
@@ -526,7 +525,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <small class="text-start text-white " style="font-size: 0.6rem"> &nbsp;TRIP ADVISOR</small>
                 </span>
               </span>
-           </div>
+            </div>
             <div class="col-6 col-md-3 p-3">
               <span class="d-flex" style="width: 150px;">
                 <span> <i class="fa-brands fa-google sx" style="color: white;"></i></span>
@@ -633,112 +632,153 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
     <small class=" text-muted mb-1 mx-2" style="font-size: 15px; ">Curated with expertise</small>
     <div class="container swiper mySwiper2 p-0 m-0" id="swiper1">
       <div class="swiper-wrapper">
-         <div class="swiper-slide swiper22 " id="swiperx" style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
-          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right"
-            data-aos-duration="4000" style="width: 100%;">
+        <div class="swiper-slide swiper22 " id="swiperx"
+          style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
+          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right" data-aos-duration="4000"
+            style="width: 100%;">
             <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
                width: fit-content;">
-              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span style="font-size: 13px;"><i
+              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span
+                  style="font-size: 13px;"><i
                     class="rounded-pill px-2 py-0 pb-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
               </small>
               <p class="text-start d-flex justify-content-between" style="font-size: 14px;">Romantic Escape To Kashmir
-      
               </p>
-             
-              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam . 1 day Srinagar</span> 
+              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam
+                  . 1 day Srinagar</span>
               </small>
-                <hr class="mt-2 mb-2">
+              <hr class="mt-2 mb-2">
               <h6 class="text-start">INR 21000 &nbsp;<small>
-                <s style="font-size: 14px;">INR
-                38182</s></small>
-                  <button class="px-2 py-1 text-white border-0 rounded"
-                    style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
-                  
+                  <s style="font-size: 14px;">INR
+                    38182</s></small>
+                <button class="px-2 py-1 text-white border-0 rounded"
+                  style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
               </h6>
-              
-              
-              
-                    <div class="d-flex justify-content-between flex-wrap">
-              <button class="btn btn-light-outlined" style="border: solid white 1px;">
-                <i class="fa-solid fa-phone text-white" role="button"></i>
-              </button>
-              <button class="btn btn-light d-block p-2" style="width: 85%;">Request&nbsp;Callback</button>
+              <div class="d-flex justify-content-between flex-wrap">
+                <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                  <i class="fa-solid fa-phone text-white" role="button"></i>
+                </button>
+                <button class="btn btn-light d-block p-2 text-capitalize"
+                  style="width: 85%;font-size: 14px ;font-weight: 500;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Request&nbsp;Callback</button>
               </div>
             </div>
-            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;" alt="Camera" />
+            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;"
+              alt="Camera" />
           </div>
         </div>
-        <div class="swiper-slide swiper22 " id="swiperx" style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
-          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right"
-            data-aos-duration="4000" style="width: 100%;">
+        <div class="swiper-slide swiper22 " id="swiperx"
+          style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
+          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right" data-aos-duration="4000"
+            style="width: 100%;">
             <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
                width: fit-content;">
-              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span style="font-size: 13px;"><i
+              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span
+                  style="font-size: 13px;"><i
                     class="rounded-pill px-2 py-0 pb-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
               </small>
               <p class="text-start d-flex justify-content-between" style="font-size: 14px;">Romantic Escape To Kashmir
-      
+
               </p>
-             
-              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam . 1 day Srinagar</span> 
+
+              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam
+                  . 1 day Srinagar</span>
               </small>
-                <hr class="mt-2 mb-2">
+              <hr class="mt-2 mb-2">
               <h6 class="text-start">INR 21000 &nbsp;<small>
-                <s style="font-size: 14px;">INR
-                38182</s></small>
-                  <button class="px-2 py-1 text-white border-0 rounded"
-                    style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
-                  
+                  <s style="font-size: 14px;">INR
+                    38182</s></small>
+                <button class="px-2 py-1 text-white border-0 rounded"
+                  style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
               </h6>
-              
-              
-              
-                    <div class="d-flex justify-content-between flex-wrap">
-              <button class="btn btn-light-outlined" style="border: solid white 1px;">
-                <i class="fa-solid fa-phone text-white" role="button"></i>
-              </button>
-              <button class="btn btn-light d-block p-2" style="width: 85%;">Request&nbsp;Callback</button>
+              <div class="d-flex justify-content-between flex-wrap">
+                <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                  <i class="fa-solid fa-phone text-white" role="button"></i>
+                </button>
+                <button class="btn btn-light d-block p-2 text-capitalize"
+                  style="width: 85%;font-size: 14px;font-weight: 500;" data-bs-toggle="modal"
+                  data-bs-target="#exampleModal">Request&nbsp;Callback</button>
               </div>
             </div>
-            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;" alt="Camera" />
+            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;"
+              alt="Camera" />
           </div>
         </div>
-        <div class="swiper-slide swiper22 " id="swiperx" style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
-          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right"
-            data-aos-duration="4000" style="width: 100%;">
+        <div class="swiper-slide swiper22 " id="swiperx"
+          style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
+          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right" data-aos-duration="4000"
+            style="width: 100%;">
             <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
                width: fit-content;">
-              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span style="font-size: 13px;"><i
+              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span
+                  style="font-size: 13px;"><i
                     class="rounded-pill px-2 py-0 pb-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
               </small>
               <p class="text-start d-flex justify-content-between" style="font-size: 14px;">Romantic Escape To Kashmir
-      
+
               </p>
-             
-              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam . 1 day Srinagar</span> 
+
+              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam
+                  . 1 day Srinagar</span>
               </small>
-                <hr class="mt-2 mb-2">
+              <hr class="mt-2 mb-2">
               <h6 class="text-start">INR 21000 &nbsp;<small>
-                <s style="font-size: 14px;">INR
-                38182</s></small>
-                  <button class="px-2 py-1 text-white border-0 rounded"
-                    style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
-                  
+                  <s style="font-size: 14px;">INR
+                    38182</s></small>
+                <button class="px-2 py-1 text-white border-0 rounded"
+                  style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
+
               </h6>
-              
-              
-              
-                    <div class="d-flex justify-content-between flex-wrap">
-              <button class="btn btn-light-outlined" style="border: solid white 1px;">
-                <i class="fa-solid fa-phone text-white" role="button"></i>
-              </button>
-              <button class="btn btn-light d-block p-2" style="width: 85%;">Request&nbsp;Callback</button>
+              <div class="d-flex justify-content-between flex-wrap">
+                <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                  <i class="fa-solid fa-phone text-white" role="button"></i>
+                </button>
+                <button class="btn btn-light d-block p-2 text-capitalize" style="width: 85%;font-size: 14px;font-weight: 500;" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Request&nbsp;Callback</button>
               </div>
             </div>
-            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;" alt="Camera" />
+            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;"
+              alt="Camera" />
           </div>
         </div>
-    
+        <div class="swiper-slide swiper22 " id="swiperx"
+          style="background-image: url(landing/clone26.avif); background-size: cover;border-radius: 10px; background-repeat: no-repeat;">
+          <div class="d-flex flex-column justify-content-end rounded-3 " data-aos="flip-right" data-aos-duration="4000"
+            style="width: 100%;">
+            <div class="rounded-3 row position-absolute text-white py-3 mx-auto" style="
+               width: fit-content;">
+              <small class="d-flex justify-content-between" style="font-size: 13px;">5 days & 6 nights <span
+                  style="font-size: 13px;"><i
+                    class="rounded-pill px-2 py-0 pb-2 fs-5 fa-solid fa-star"></i>4.6(2k)</span>
+              </small>
+              <p class="text-start d-flex justify-content-between" style="font-size: 14px;">Romantic Escape To Kashmir
+
+              </p>
+
+              <small class="text-start" style="font-size: 12px;"><span class="fw-bold">3 days Srinagar . 2 days Pahalgam
+                  . 1 day Srinagar</span>
+              </small>
+              <hr class="mt-2 mb-2">
+              <h6 class="text-start">INR 21000 &nbsp;<small>
+                  <s style="font-size: 14px;">INR
+                    38182</s></small>
+                <button class="px-2 py-1 text-white border-0 rounded"
+                  style="font-size: 12px;background-color: #AA8D63;">save INR 17182</button>
+
+              </h6>
+              <div class="d-flex justify-content-between flex-wrap">
+                <button class="btn btn-light-outlined" style="border: solid white 1px;">
+                  <i class="fa-solid fa-phone text-white" role="button"></i>
+                </button>
+                <button class="btn btn-light d-block p-2 text-capitalize" style="width: 85%;font-size: 14px;font-weight: 500;" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">Request&nbsp;Callback</button>
+              </div>
+            </div>
+            <img src="landing/clone26.avif" class="d-block  rounded-3" style="height: 80vh; visibility: hidden;"
+              alt="Camera" />
+          </div>
+        </div>
+
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -875,7 +915,6 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
   </div>
 
   <br>
-
   <div class="container  rounded  text-start  p-3 d-flex flex-column flex-grow" style="color: #515151;">
     <p id="gd" class="fs-4  fw-bold mx-0 p-0 mb-3" style="font-size:25px; font-weight:600">Honeymoon Special </p>
     <small id="ll" class="fs-5  mb-4 mx-0" style="font-size: 15px; ">Tailor-Made Honeymoons Just For You</small>
@@ -909,7 +948,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -943,7 +982,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -977,7 +1016,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1011,7 +1050,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1038,18 +1077,13 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         <p class="text-light" style="font-size: 14px;">Connect with our destination experts to get exciting discounts
         </p>
         <button type="button" class=" text-capitalize btnn btn btn-white bg-white  border-0 rounded"
-          style="color: #F37205;border-color: #F37205;" data-bs-toggle="modal" data-bs-target="#exampleModal">Know
+          style="color: #F37205;border-color: #F37205;font-size: 14px;font-weight: 500;" data-bs-toggle="modal" data-bs-target="#exampleModal">Know
           more</button>
 
       </div>
     </div>
   </div>
-
-
-
-
-  <div class="divider"></div>
-
+ <div class="divider"></div>
   <div class="container  rounded  text-start  p-3 d-flex flex-column flex-grow" style="color: #515151;">
     <p id="gd" class="fs-4  fw-bold mx-0 p-0 mb-3" style="font-size:25px; font-weight:600">Honeymoon Special </p>
     <small id="ll" class="fs-5  mb-4 mx-0" style="font-size: 15px; ">Tailor-Made Honeymoons Just For You</small>
@@ -1083,7 +1117,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1117,7 +1151,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1151,7 +1185,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1185,13 +1219,12 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <div class="swiper-pagination"></div>
     </div>
@@ -1231,7 +1264,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1265,7 +1298,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1299,7 +1332,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1333,22 +1366,17 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
           </div>
         </div>
-
       </div>
       <div class="swiper-pagination"></div>
     </div>
   </div>
-
   <div class="divider"></div>
-
-
-
   <div class="divider"></div>
   <div class="container  rounded  text-start  p-3 d-flex flex-column flex-grow" style="color: #515151;">
     <p id="gd" class="fs-4  fw-bold mx-0 p-0 mb-3" style="font-size:25px; font-weight:600">Honeymoon Special </p>
@@ -1383,7 +1411,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1417,7 +1445,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1451,7 +1479,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1485,7 +1513,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
                   <i class="fa-solid fa-phone " role="button" style="color: #F37002"></i>
                 </a>
                 <a href="#" class="text-capitalize btn  text-white px-5 py-2 border rounded" role="button"
-                  style="background-color: #F37002;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
+                  style="background-color: #F37002;font-size: 14px;font-weight: 500;width: 85%;" data-bs-toggle="modal" data-bs-target="#exampleModal">Request
                   Callback</a>
               </div>
             </div>
@@ -1524,7 +1552,7 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
       </div>
     </div>
   </div>
-  
+
   <div class="accordion  container ">
     <p class="fs-4  fw-bold mx-3 text-secondary">Kashmir Tour FAQs </p>
     <div class="accordion-item">
@@ -1536,25 +1564,25 @@ https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css
         typically ranges between INR 17,000
         to INR 40,000 per person for a 5-day trip. This cost varies according to the accommodation type,
 
-  transportation, season, and included activities. Expenses generally include local travel, hotel stays,
-  meals, entry fees for attractions, and extra activities like shikara rides. Peak seasons may see higher
-  prices. Furthermore, additional expenses for shopping and insurance should also be considered, with the
-  total cost dependent on personal choices and travel style.</div>
-</div>
-<div class="accordion-item">
-<input type="checkbox" id="accordion2">
-<label for="accordion2" class="accordion-item-title"><span class="icon " style="color: #f37002;"></span>How can
-  I go to
-  Kashmir on a low budget</label>
-<div class="accordion-item-desc">To visit Kashmir on a low budget, choose a <strong class="fw-bold">Jammu
-    Kashmir holiday package</strong> from Thrillophilia, known for affordable yet
-  enriching travel experiences. The packages often include budget-friendly accommodations, cost-effective
-  transportation options, and well-planned itineraries that cover major attractions efficiently. The approach
-  ensures a memorable trip and keeps expenses in check, offering an excellent value-for-money experience in
-  the stunning landscapes of Kashmir.</div>
-</div>
-</div>
-<div class="deals mb-5"></div>
+        transportation, season, and included activities. Expenses generally include local travel, hotel stays,
+        meals, entry fees for attractions, and extra activities like shikara rides. Peak seasons may see higher
+        prices. Furthermore, additional expenses for shopping and insurance should also be considered, with the
+        total cost dependent on personal choices and travel style.</div>
+    </div>
+    <div class="accordion-item">
+      <input type="checkbox" id="accordion2">
+      <label for="accordion2" class="accordion-item-title"><span class="icon " style="color: #f37002;"></span>How can
+        I go to
+        Kashmir on a low budget</label>
+      <div class="accordion-item-desc">To visit Kashmir on a low budget, choose a <strong class="fw-bold">Jammu
+          Kashmir holiday package</strong> from Thrillophilia, known for affordable yet
+        enriching travel experiences. The packages often include budget-friendly accommodations, cost-effective
+        transportation options, and well-planned itineraries that cover major attractions efficiently. The approach
+        ensures a memorable trip and keeps expenses in check, offering an excellent value-for-money experience in
+        the stunning landscapes of Kashmir.</div>
+    </div>
+  </div>
+  <div class="deals mb-5"></div>
 
   <div class="container row mx-auto deals ">
     <p class="fs-4 fw-bold  text-secondary">Popular Kashmir Attractions </p>
